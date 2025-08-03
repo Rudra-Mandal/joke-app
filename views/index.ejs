@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website of Jokes</title>
+    <link rel="stylesheet" href="/styles/main.css"> 
+    
+</head>
+
+<body>
+    <!-- Hidden radio buttons for functionality -->
+    <!-- <input type="radio" id="random" name="jokeCategories" style="display: none;" checked>
+    <input type="radio" id="programming" name="jokeCategories" style="display: none;">
+    <input type="radio" id="misc" name="jokeCategories" style="display: none;">
+    <input type="radio" id="dark" name="jokeCategories" style="display: none;">
+    <input type="radio" id="pun" name="jokeCategories" style="display: none;">
+    <input type="radio" id="spooky" name="jokeCategories" style="display: none;">
+    <input type="radio" id="christmas" name="jokeCategories" style="display: none;"> -->
+
+    <div class="container">
+        <h1 class="main-title">Welcome to the website of jokes</h1>
+
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <form action="/choice" method="post">
+                    <div class="joke-categories">
+                        <div class="category-item">
+                            <input type="radio" id="random-btn" name="jokeCategories" value="any" checked >
+                            <label for="random-btn">Random</label>
+                        </div>
+                        <div class="category-item">
+                            <span style="margin-right: 10px;">Custom:</span>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="programming-btn" name="jokeCategories" value="programming">
+                            <label for="programming-btn">Programming</label>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="misc-btn" name="jokeCategories" value="misc">
+                            <label for="misc-btn">Misc</label>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="dark-btn" name="jokeCategories" value="dark">
+                            <label for="dark-btn">Dark</label>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="pun-btn" name="jokeCategories" value="pun">
+                            <label for="pun-btn">Pun</label>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="spooky-btn" name="jokeCategories" value="spooky">
+                            <label for="spooky-btn">Spooky</label>
+                        </div>
+                        <div class="subcategory">
+                            <input type="radio" id="christmas-btn" name="jokeCategories" value="christmas">
+                            <label for="christmas-btn">Christmas</label>
+                        </div>
+                    </div>
+
+                    <button class="click-here-btn" type="submit">CLICK HERE</button>
+            </div>
+            </form>
+
+
+            <div class="right-panel">
+                <div class="joke-display">
+                    <div class="ready-banner">
+                        <span class="emoji">😊</span>Ready to laugh<span class="emoji">😊</span>
+                    </div>
+
+                    <!-- Different joke content for each category -->
+                    <div class="joke-content">
+                        <div class="joke-content-item joke-random" style="display: flex; flex-direction: column;">
+                            <% if(locals.data) {%>
+                                <p>
+                                    <%= data["setup"] %>
+                                </p>
+                                <br>
+                                <p>
+                                    <%= data["delivery"] %>
+                                </p>
+                            <% }else{  %>
+                                Get ready for a big smile.
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

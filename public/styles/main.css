@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bitcount+Grid+Double:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libertinus+Math&family=Lilita+One&family=Monoton&family=Pacifico&family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Sevillana&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bitcount+Grid+Double:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libertinus+Math&family=Lilita+One&family=Monoton&family=Pacifico&family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Sevillana&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    min-height: 100vh;
+    /* color: #e2e8f0; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #79797a;
+    letter-spacing: 1px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-panel {
+    background: rgba(45, 55, 72, 0.8);
+    border-radius: 12px;
+    padding: 30px;
+    min-width: 300px;
+    /* backdrop-filter: blur(10px); */
+    border: 2px solid rgba(45, 55, 72);
+    box-shadow: 0 0px 12px 6px rgba(0, 0, 0, 0.1);
+}
+
+.joke-categories {
+    margin-bottom: 40px;
+}
+
+.category-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #a0aec0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.category-item input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4299e1;
+    transform: scale(1.2);
+}
+
+.category-item label {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.category-item:hover label {
+    color: #e2e8f0;
+}
+
+.subcategory {
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #718096;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #556c7f;
+}
+
+.subcategory label {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.subcategory:hover label {
+    color: #a0aec0;
+}
+
+.click-here-btn {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: rgb(210, 209, 209);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0px 5px 2px rgba(134, 179, 216, 0.2);
+    width: 100%;
+}
+
+.click-here-btn:hover {
+    background: linear-gradient(135deg, #3182ce, #2c5282);
+    transform: translateY(-2px);
+    box-shadow: 0 0px 12px 2px rgba(0, 0, 0, 0.1);
+}
+
+.click-here-btn:active {
+    transform: translateY(0);
+}
+
+.right-panel {
+    background: rgba(160, 174, 192, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 40rem;
+    min-height: 35rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.joke-display {
+    background: #79797a;
+    border-radius: 12px;
+    padding: 1rem;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+}
+
+.ready-banner {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d3748;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.emoji {
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+.joke-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Hide content by default */
+.joke-content-item {
+    display: none;
+}
+
+/* Show content when radio button is checked */
+#random:checked~.content-wrapper .joke-random,
+#programming:checked~.content-wrapper .joke-programming,
+#misc:checked~.content-wrapper .joke-misc,
+#dark:checked~.content-wrapper .joke-dark,
+#pun:checked~.content-wrapper .joke-pun,
+#spooky:checked~.content-wrapper .joke-spooky,
+#christmas:checked~.content-wrapper .joke-christmas {
+    display: flex;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    opacity: 0.8;
+}
+
+/* Style for checked radio buttons */
+input[type="radio"]:checked+label {
+    color: #76b7e9 !important;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .left-panel,
+    .right-panel {
+        min-width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Animation for joke display */
+.joke-content-item {
+    animation: fadeIn 0.5s ease-in;
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "Playwrite AU QLD", cursive;
+    font-weight: 900;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
