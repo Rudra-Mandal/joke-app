@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
+app.get('/choice', (req, res) => {
+    res.render('index.ejs')
+})
 app.post('/choice', async (req, res) => {
 
 
